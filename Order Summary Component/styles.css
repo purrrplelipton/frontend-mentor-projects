@@ -1,0 +1,201 @@
+*::before, *, *::after  {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Red Hat Display', sans-serif;
+    transition: .3s ease-in-out;
+}
+:root {
+    font-size: 18px;
+    --clr-blue-1: hsl(225, 100%, 98%);
+    --clr-blue-2: hsl(225, 100%, 94%);
+    --clr-blue-3: hsl(224, 23%, 55%);
+    --clr-blue-4: hsl(245, 75%, 52%);
+    --clr-blue-5: hsl(223, 47%, 23%);
+}
+body  {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--clr-blue-2);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% calc(100vh - 50%);
+    display: grid;
+    place-items: center;
+}
+
+body > .wrapper  {
+    width: 30rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, .1);
+}
+
+body > .wrapper > img {
+    display: block;
+    width: 100%;
+}
+
+body > .wrapper > div {
+    padding: 3rem;
+    text-align: center;
+}
+
+body > .wrapper > div > h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1.1rem;
+    color: var(--clr-blue-5);
+}
+
+body > .wrapper > div > p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--clr-blue-3);
+}
+
+body > .wrapper > div > .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clr-blue-1);
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0 2rem;
+    border-radius: 1rem;
+}
+
+body > .wrapper > div > .button > .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > .wrapper > div > .button > .left > img {
+    width: 3.25rem;
+}
+
+body > .wrapper > div > .button > .left > .mid-content {
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+body > .wrapper > div > .button > .left > .mid-content > p:first-child {
+    font-weight: 900;
+    height: 1.5rem;
+    color: var(--clr-blue-5);
+}
+
+body > .wrapper > div > .button > .left > .mid-content > p:last-child {
+    font-weight: 500;
+    height: 1.5rem;
+    color: var(--clr-blue-3);
+}
+
+body > .wrapper > div > .button > a {
+    width: max-content;
+    font-weight: 900;
+    line-height: 1.5;
+    height: 1.5;
+    color: var(--clr-blue-4);
+    text-decoration: underline;
+}
+
+body > .wrapper > div > .button > a:hover {
+    text-decoration: none;
+}
+
+body > .wrapper > div > button {
+    width: 100%;
+    padding: 1.25rem 0;
+    background-color: var(--clr-blue-4);
+    color: var(--clr-blue-1);
+    border: none;
+    box-shadow: 0 1.1rem 1.8rem hsl(245, 75%, 90%);
+    font-size: inherit;
+    font-weight: 900;
+    border-radius: 1rem;
+}
+
+body > .wrapper > div > button:hover {
+    filter: opacity(75%);
+}
+
+body > .wrapper > div > a {
+    display: block;
+    width: max-content;
+    font-weight: 900;
+    line-height: 1.13;
+    text-decoration: none;
+    margin: 3rem auto 0 auto;
+    color: var(--clr-blue-3);
+}
+
+body > .wrapper > div > a:hover {
+    color: var(--clr-blue-5);
+}
+
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+
+    body > .wrapper {
+        width: 85%;
+    }
+  
+    body > .wrapper > div {
+        padding: 2.25rem 1.8rem;
+    }
+
+    body > .wrapper > div > h1 {
+        font-size: 1.25rem;
+    }
+
+    body > .wrapper > div > p {
+        font-size: .85rem;
+    }
+
+    body > .wrapper > div > .button {
+        padding: 1.25rem 1rem;
+        margin: 1rem 0 1.5rem;
+    }
+
+    body > .wrapper > div > .button > .left > .mid-content {
+        margin-left: .75rem;
+    }
+
+    body > .wrapper > div > .button > .left > img {
+        width: 2.5rem;
+    }
+
+    body > .wrapper > div > .button > .left > .mid-content > p:first-child {
+        font-size: .85rem;
+        height: 1.2rem;
+    }
+    
+    body > .wrapper > div > .button > .left > .mid-content > p:last-child {
+        font-size: .8rem;
+        height: 1.2rem;
+    }
+
+    body > .wrapper > div > .button > a {
+        font-size: .8rem;
+    }
+
+    body > .wrapper > div > button {
+        font-size: .8rem;
+        padding: .8rem 0;
+    }
+
+    body > .wrapper > div > a {
+        font-size: .9rem;
+        margin: 1.8rem auto 0 auto;
+    }
+  }

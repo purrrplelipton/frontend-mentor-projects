@@ -1,0 +1,92 @@
+*::before, *, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .2s ease;
+}
+
+:root{
+    font-size: 15px;
+    --neu-white: hsla(0, 0%, 100%, 0.75);
+    --neu-gray: hsl(0, 0%, 95%);
+    --border-width: 3px;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--neu-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    display: grid;
+    place-items: center;
+}
+body > .wrapper{
+    width: 86rem;
+    border-radius: 0.63rem;
+    overflow: hidden;
+    display: flex;
+}
+body > .wrapper > div{
+    background-color: var(--bg-color);
+    padding: 5rem 4rem;
+}
+body > .wrapper > div > *{
+    display: block;
+}
+body > .wrapper > div > img{
+    width: 6rem;
+}
+body > .wrapper > div > h1{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3.75rem;
+    color: var(--neu-gray);
+    margin: 3rem 0;
+}
+body > .wrapper > div > p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--neu-white);
+}
+body > .wrapper > div > span {
+    width: max-content;
+    padding: calc(1.75rem - 2*var(--border-width)) calc(3.8rem - 2*var(--border-width));
+    border-radius: 3.8rem;
+    border: var(--border-width) solid transparent;
+    background-color: var(--neu-gray);
+    font-size: 1.3rem;
+    color: var(--txt-color);
+    margin: 8rem 0 0;
+}
+
+body > .wrapper > div > span:hover{
+    border: var(--border-width) solid var(--neu-gray);
+    background-color: var(--txt-color);
+    color: var(--neu-gray);
+}
+@media screen and (max-width: 375px) {
+    :root {
+        --border-width: 2px;
+    }
+    body > .wrapper{
+        width: 85%;
+        flex-direction: column;
+        margin: 4rem 0;
+    }
+    body > .wrapper > div {
+        padding: 3rem 2.5rem;
+    }
+    body > .wrapper > div > img{
+        width: 4rem;
+    }
+    body > .wrapper > div > h1{
+        font-size: 2.5rem;
+        margin: 2.5rem 0 1.5rem;
+    }
+    body > .wrapper > div > p{
+        font-size: 1.05rem;
+    }
+    body > .wrapper > div > span{
+        margin: 1.5rem 0 0;
+        padding: calc(1.1rem - 2*var(--border-width)) calc(2.5rem - 2*var(--border-width));
+        border-radius: 2rem;
+        font-size: 1rem;
+    }
+}
