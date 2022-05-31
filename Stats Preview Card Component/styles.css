@@ -7,23 +7,21 @@
     --st-white-I: hsla(0, 0%, 100%, 0.75);/*main paragraph*/
     --st-white-II: hsla(0, 0%, 100%, 0.6);/*stat headings*/
 }
-*, *::before, *::after{
+*::before, *, *::after{
     /* outline: 1px solid red; */
     font-family: 'Inter', sans-serif;
-    transition: all 200ms ease;
+    transition: all .2s ease;
 }
 body{
     width: 100vw;
     height: 100vh;
     background-color: var(--vd-blue);
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
 }
 body > .container{
-    width: 72.5%;
-    height: 57.5%;
+    height: 38rem;
     background-color: var(--dd-blue);
     border-radius: .6rem;
     overflow: hidden;
@@ -31,7 +29,7 @@ body > .container{
 }
 body > .container > div:first-of-type{
     width: 51%;
-    height: 100%;
+    /* height: 100%; */
     box-sizing: border-box;
     padding: 5.5rem;
     display: flex;
@@ -87,25 +85,7 @@ body > .container > div:last-child{
     background-image: url(./images/image-header-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-blend-mode: color; */
-    /* background-blend-mode: color-burn; */
-    /* background-blend-mode: color-dodge; */
-    /* background-blend-mode: darken; */
-    /* background-blend-mode: difference; */
-    /* background-blend-mode: exclusion; */
-    /* background-blend-mode: hard-light; */
-    /* background-blend-mode: hue; */
-    /* background-blend-mode: lighten; */
-    /* background-blend-mode: luminosity; */
     background-blend-mode: multiply;
-    /* background-blend-mode: normal; */
-    /* background-blend-mode: overlay; */
-    /* background-blend-mode: saturation; */
-    /* background-blend-mode: screen; */
-    /* background-blend-mode: soft-light; */
-    /* background-blend-mode: inherit; */
-    /* background-blend-mode: initial; */
-    /* background-blend-mode: unset; */
 }
 @media screen and (max-width: 480px) and (min-width: 360px){
     body > .container{
